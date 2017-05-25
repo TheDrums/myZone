@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<script type="text/javascript">
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+            //这里的  375  根据设计稿来定  比如设计稿是基于iPhone6的  那么屏幕尺寸就是375
+        };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<title>下载</title>
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,header,hgroup,nav,section,article,aside,footer,figure,figcaption,menu,button{margin:0;padding:0;outline:0}
+body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif; color:#666; -webkit-user-select:none;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(255,255,255,0)}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:normal}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+li{list-style:none}
+input,button,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;border:0;background:0;-webkit-appearance:none;outline:0}
+a,button,input,select,textarea,a:focus,button:focus,input:focus,select:focus,textarea:focus,[onclick]{outline:0;-webkit-tap-highlight-color:rgba(255,255,255,0)}
+a{-webkit-touch-callout:none;text-decoration:none;color:#00a5e0;outline:0}
+em,i{font-style:normal}
+i,b{font-style:normal; font-weight:normal;}
+*{-webkit-box-sizing:border-box; box-sizing:border-box; position:relative;}
+
+body{background-color:#f3f3f3; overflow-x:hidden;}
+::-webkit-input-placeholder{color:#999}
+article.home{width:100%; height:100%; position:fixed; left:0; top:0; background:url(img/bg.png) #f6f6f6 center top no-repeat; background-size:100% 100%;}
+.dl-list{padding-left:0.75rem; background-color:#fff;}
+.dl-item{width:100%; border-width:0 0 1px 0; -webkit-border-image:url(img/border.png) 2 2 stretch; border-image:url(img/border.png) 2 2 stretch;}
+.dl-item:last-child{border-width:0 0 0 0;}
+.dl-item .title{font-size:0.9rem; color:#b8b8b8; line-height:1.1rem; padding:0.625rem 0 0.5rem 0;}
+.dl-item .dl-w1{height:5.2rem; position:relative;}
+.dl-item .btn{position:absolute; right:1.1rem; top:1.1rem; width:5rem; height:2rem; line-height:2rem; text-align:center; color:#fff; -webkit-border-radius:1rem; border-radius:1rem; background-color:#4fc0f4; font-size:0.85rem;}
+.dl-l{margin-left:3.4rem; width:5.15rem;  text-align:center;}
+.dl-l img{display:block; width:3.125rem; height:3.125rem; margin:0 auto;}
+.dl-l p{font-size:0.65rem; margin-top:0.6rem; color:#585858;}
+.txt-w{font-size:0.6rem; color:#878787; padding-left:0.75rem; line-height:0.9rem;}
+.txt-w h4{color:#6f6f6f; padding:0.25rem 0;}
+.mask{width:100%; height:100%; position:fixed; left:0; top:0; background:url(img/arrow2.png) right top no-repeat; background-size:200px auto; background-color:rgba(0,0,0,0.34); z-index:9999; display:none;} 
+</style>
+</head>
+<body>
+    <article class="home">
+        <div class="dl-list">
+            <ul>
+                <li class="dl-item">
+                    <div class="dl-w1">
+                        <div class="dl-l">
+                            <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="">
+                            <p>杭易联</p>
+                        </div>
+                        <a id="btn1" class="btn" href="#">下载</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="txt-w">
+            <h4>说明：</h4>
+            <p>1、行内应用涉及安全管控，不便发布到应用市场，因此苹果手机需要权限设置。<span style="color:#4fc0f4;font-weight:bold">（苹果手机点击下载后就已经开始下载了，可切换到桌面查看进度，由于未发appstore，所以界面不会自动跳转）</span></p>
+            <p>2、登录用户名密码与管理系统2.0一致，认证短信是发送到管理系统2.0登记的手机号码，若手机号码有误可自行登陆统一认证点击右上角的设置进行修改。</p>
+            <p>3、PC版下载地址在OA电子银行部主页右下角</p>
+            <p>4、杭易联和wps插件安装包较大，请尽量在wifi环境下载</p>
+	    <p>5、我们的文件有安全保护，您还需要下载我们定制的专用WPS插件</p>
+        </div>
+    </article>
+    <div id="mask" class="mask"></div>
+</body>
+<script>
+
+    function showMask() {
+        if(isWeiXin() || isQQ()){
+            document.getElementById("mask").style.display="block";
+        }else{
+            init();
+        }
+    };
+    
+    var Terminal = {
+        platform:function()
+        {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {
+                android:u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                iPhone:u.indexOf('iPhone') > -1
+            };
+        }()
+    }
+    
+    var isWeiXin = function(){
+        var ua = window.navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    var isQQ = function(){
+        var ua = window.navigator.userAgent.toLowerCase();
+        if(ua.match(/qq/i) == 'qq'){
+            if(ua.match(/mqqbrowser/i) == 'mqqbrowser'){
+                return false;
+            }else{
+                return true;
+            }
+        }else{
+            return false;
+        }
+    }
+
+    function init(){
+        if(Terminal.platform.android){
+                document.getElementById('btn1').href = "http://www.hzbank.com.cn/uploadfiles/hyl_hzbank.apk";
+                document.getElementById('btn2').href = "http://www.hzbank.com.cn/uploadfiles/wps.apk";
+           }else if(Terminal.platform.iPhone){
+                document.getElementById('btn1').href = "itms-services://?action=download-manifest&url=https://www.vanvy.cn/ecm(hzbank).xml";
+                document.getElementById('btn2').href = "itms-services://?action=download-manifest&url=https://www.vanvy.cn/wps(hzbank).xml";
+           }
+    }
+    showMask(); 
+
+</script>
+</html>
+
