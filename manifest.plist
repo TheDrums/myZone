@@ -11,31 +11,31 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://www.hzbank.com.cn/uploadfiles/hyl_hzbank.ipa</string>
+					<string>https://raw.githubusercontent.com/TheDrums/myZone/master/AppManage.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>http://www.hzbank.com.cn/mobile/images/icon57.png</string>
+					<string>https://raw.githubusercontent.com/TheDrums/myZone/master/icon57.png</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-					<string>http://www.hzbank.com.cn/mobile/images/icon512.png</string>
+					<string>https://raw.githubusercontent.com/TheDrums/myZone/master/icon512.png</string>
 				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.hzbank.officeim</string>
+				<string>com.yusys.YXBuilder2</string>
 				<key>bundle-version</key>
-				<string>1.0</string>
+				<string>1.0.1</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>杭易联</string>
+				<string>FoxIOS</string>
 			</dict>
 		</dict>
 	</array>
